@@ -15,6 +15,9 @@
 // console.log(player);
 // ~2.6
 
+//
+//
+
 // function sayHello(myName, age) {
 //   console.log("Hello! my name is " + myName + ". I'm " + age);
 // }
@@ -83,18 +86,40 @@
 
 // console.log(krAge);
 
-const age = parseInt(prompt("How old are you?"));
+// const age = parseInt(prompt("How old are you?"));
 
-if (isNaN(age) || age <= 0) {
-  console.log("Please write a real positive number");
-} else if (age < 18) {
-  console.log("You are too young!");
-} else if (age >= 18 && age <= 50) {
-  console.log("You can drink.");
-} else if (age > 50 && age <= 80) {
-  console.log("You should exercise.");
-} else if (age === 100) {
-  console.log("wow you are wise");
-} else if (age > 80) {
-  console.log("You can do whatever you want.");
+// if (isNaN(age) || age <= 0) {
+//   console.log("Please write a real positive number");
+// } else if (age < 18) {
+//   console.log("You are too young!");
+// } else if (age >= 18 && age <= 50) {
+//   console.log("You can drink.");
+// } else if (age > 50 && age <= 80) {
+//   console.log("You should exercise.");
+// } else if (age === 100) {
+//   console.log("wow you are wise");
+// } else if (age > 80) {
+//   console.log("You can do whatever you want.");
+// }
+// ~#2.16
+
+//
+//
+
+// const title = document.getElementById("title");
+// console.log(title);
+// console.dir(title);
+
+// title.innerText = "Got you!";
+
+// const hellos = document.getElementsByClassName("hello");
+// console.log(hellos);
+
+const title = document.querySelector(".hello h1");
+console.log(title);
+
+function handleTitleClick() {
+  console.log("title was clicked!");
+  title.style.color = "blue";
 }
+title.addEventListener("click", handleTitleClick);
