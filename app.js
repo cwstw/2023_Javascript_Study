@@ -115,11 +115,92 @@
 // const hellos = document.getElementsByClassName("hello");
 // console.log(hellos);
 
-const title = document.querySelector(".hello h1");
-console.log(title);
+// const h1 = document.querySelector(".hello h1");
+// console.log(h1);
+
+// function handleTitleClick() {
+//   console.log("title was clicked!");
+//   h1.style.color = "blue";
+// }
+
+// function handleMouseEnter() {
+//   h1.innerText = "mouse is here!";
+// }
+
+// function handleMouseLeave() {
+//   h1.innerText = "mouse is gone!";
+// }
+
+// // title.addEventListener("click", handleTitleClick);
+// h1.onclick = handleTitleClick;
+// h1.addEventListener("mouseenter", handleMouseEnter);
+// h1.addEventListener("mouseleave", handleMouseLeave);
+
+// function handleWindowResize() {
+//   document.body.style.backgroundColor = "tomato";
+// }
+
+// window.addEventListener("resize", handleWindowResize);
+
+// function handleWindowCopy() {
+//   alert("copier!");
+// }
+// window.addEventListener("copy", handleWindowCopy);
+
+// function handleWindowOffline() {
+//   alert("SOS no WIFI!");
+// }
+
+// function handleWindowOnline() {
+//   alert("All Good!");
+// }
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("offline", handleWindowOnline);
+
+// function handleTitleClick() {
+//   // console.log(h1.style.color);
+//   // h1.style.color = "blue";
+//   // console.log(h1.style.color);
+
+//   //정리되지 않은 코드
+//   // if (h1.style.color == "blue") {
+//   //   h1.style.color = "tomato";
+//   // } else {
+//   //   h1.style.color = "blue";
+//   // }
+
+//   ///정리된 코드
+//   const currentColor = h1.style.color;
+//   let newColor;
+//   if (currentColor == "blue") {
+//     newColor = "tomato";
+//   } else {
+//     newColor = "blue";
+//   }
+//   h1.style.color = newColor;
+// }
+
+const h1 = document.querySelector(".hello h1");
+console.log(h1);
 
 function handleTitleClick() {
-  console.log("title was clicked!");
-  title.style.color = "blue";
+  //클래스 네임 사용
+  // if (h1.className === "active") {
+  //   h1.className = "";
+  // } else {
+  //   h1.className = "active";
+  // }
+
+  //클래스 리스트 사용
+  // const ActiveClass = "active";
+  // if (h1.classList.contains(ActiveClass)) {
+  //   h1.classList.remove(ActiveClass);
+  // } else {
+  //   h1.classList.add(ActiveClass);
+  // }
+
+  //토글사용
+  h1.classList.toggle("active");
 }
-title.addEventListener("click", handleTitleClick);
+
+h1.addEventListener("click", handleTitleClick);
