@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: beige;
 }
 h1 {
@@ -10,4 +10,7 @@ h1 {
 }
 .cool-font {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+} */
+.hidden {
+  display: none;
 }

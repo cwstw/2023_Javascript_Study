@@ -7,9 +7,17 @@
     <title>momentum</title>
   </head>
   <body>
-    <div class="hello">
-      <h1 class="cool-font">Grab me!</h1>
-    </div>
+    <form id="login-form" class="hidden">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="what is your name?"
+      />
+      <input type="submit" value="Log In" />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <!-- <a href="http://nomadcoders.co">Go to courses</a> -->
     <script src="app.js"></script>
   </body>
 </html>

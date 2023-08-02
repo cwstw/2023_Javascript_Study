@@ -180,27 +180,78 @@
 //   h1.style.color = newColor;
 // }
 
-const h1 = document.querySelector(".hello h1");
-console.log(h1);
+// const h1 = document.querySelector(".hello h1");
+// console.log(h1);
 
-function handleTitleClick() {
-  //클래스 네임 사용
-  // if (h1.className === "active") {
-  //   h1.className = "";
-  // } else {
-  //   h1.className = "active";
+// function handleTitleClick() {
+//클래스 네임 사용
+// if (h1.className === "active") {
+//   h1.className = "";
+// } else {
+//   h1.className = "active";
+// }
+
+//클래스 리스트 사용
+// const ActiveClass = "active";
+// if (h1.classList.contains(ActiveClass)) {
+//   h1.classList.remove(ActiveClass);
+// } else {
+//   h1.classList.add(ActiveClass);
+// }
+
+//토글사용
+// h1.classList.toggle("active");
+// }
+
+// h1.addEventListener("click", handleTitleClick);
+//~#3.8
+
+//
+//
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) {
+  event.preventDefault();
+  // if (value === "") {
+  //   alert("Please write your name!");
+  // } else if (value.length > 15) {
+  //   alert("Your name is too long!");
   // }
+  const username = loginInput.value;
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  console.log(username);
 
-  //클래스 리스트 사용
-  // const ActiveClass = "active";
-  // if (h1.classList.contains(ActiveClass)) {
-  //   h1.classList.remove(ActiveClass);
-  // } else {
-  //   h1.classList.add(ActiveClass);
-  // }
-
-  //토글사용
-  h1.classList.toggle("active");
+  localStorage.setItem(USERNAME_KEY, username);
+  //greeting.innerText = `Hello, ${username}`;
+  paintGreetings(username);
 }
 
-h1.addEventListener("click", handleTitleClick);
+function paintGreetings(username) {
+  greeting.innerText = `Hello, ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+  //show the form
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  //show the greetings
+  paintGreetings(savedUsername);
+}
+
+// function handleLinkClick(event) {
+//   event.preventDefault();
+//   console.dir(event);
+//   //alert("clicked!");
+// }
+
+// const link = document.querySelector("a");
+// link.addEventListener("click", handleLinkClick);
