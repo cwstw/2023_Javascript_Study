@@ -209,6 +209,15 @@
 //
 //
 
+// function handleLinkClick(event) {
+//   event.preventDefault();
+//   console.dir(event);
+//   //alert("clicked!");
+// }
+
+// const link = document.querySelector("a");
+// link.addEventListener("click", handleLinkClick);
+
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
@@ -217,11 +226,6 @@ const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  // if (value === "") {
-  //   alert("Please write your name!");
-  // } else if (value.length > 15) {
-  //   alert("Your name is too long!");
-  // }
   const username = loginInput.value;
   loginForm.classList.add(HIDDEN_CLASSNAME);
   console.log(username);
@@ -246,12 +250,7 @@ if (savedUsername === null) {
   //show the greetings
   paintGreetings(savedUsername);
 }
+//~#4.7
 
-// function handleLinkClick(event) {
-//   event.preventDefault();
-//   console.dir(event);
-//   //alert("clicked!");
-// }
-
-// const link = document.querySelector("a");
-// link.addEventListener("click", handleLinkClick);
+//
+//
