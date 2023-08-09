@@ -11,6 +11,68 @@ h1 {
 .cool-font {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 } */
+
+@font-face {
+  font-family: "Dovemayo_gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .hidden {
   display: none;
+}
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Dovemayo_gothic;
+  color: aliceblue;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+}
+
+.backgroud-image {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+}
+
+#greeting {
+  margin-bottom: -6px;
+  font-size: 40px;
+  font-weight: 550;
+}
+
+#clock {
+  font-size: 100px;
+}
+
+#todo-form {
+  width: 270px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+#todo-list {
+  font-size: 20px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#quote {
+  margin-bottom: 12px;
+}
+
+#weather {
+  font-size: 12px;
+  color: darkgrey;
 }

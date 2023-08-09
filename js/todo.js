@@ -30,6 +30,10 @@ function paintToDo(newToDo) {
   span.innerText = newToDo.text;
 
   const button = document.createElement("button");
+  button.classList.add("m-2");
+  button.classList.add("btn");
+  button.classList.add("btn-light");
+  button.classList.add("btn-sm");
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
 
