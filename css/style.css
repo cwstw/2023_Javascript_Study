@@ -56,6 +56,11 @@ h1 {
   font-size: 100px;
 }
 
+#login-form {
+  width: 270px;
+  margin: auto;
+  margin-bottom: 15px;
+}
 #todo-form {
   width: 270px;
   margin: auto;
